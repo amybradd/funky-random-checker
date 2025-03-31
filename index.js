@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors'); // Ensure cors is installed: npm install cors
@@ -6,7 +7,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow requests from the Vite development server
+    origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173', // Use environment variable for origin
 }));
 
 const quotes = [
@@ -44,7 +45,7 @@ app.get('/api/random-animal', async (req, res) => {
 
 app.get('/api/weather', async (req, res) => {
     const city = req.query.city || 'London'; // Default to London if no city is provided
-    const apiKey = '2fc594e5f00ebb22d3b3b7f171b50d1f'; // Replace with your OpenWeatherMap API key
+    const apiKey = process.env.OPENWEATHER_API_KEY; // Use environment variable for API key
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     try {

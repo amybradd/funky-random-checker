@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/funky-random-checker/static/css/main.6545ffe2.css",
+    "main.js": "/funky-random-checker/static/js/main.b4ce0bb4.js",
+    "index.html": "/funky-random-checker/index.html",
+    "main.6545ffe2.css.map": "/funky-random-checker/static/css/main.6545ffe2.css.map",
+    "main.b4ce0bb4.js.map": "/funky-random-checker/static/js/main.b4ce0bb4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6545ffe2.css",
+    "static/js/main.b4ce0bb4.js"
+  ]
+}
